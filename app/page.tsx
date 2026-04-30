@@ -1,35 +1,40 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "MyoMentia",
-};
-
 export default function Home() {
   return (
     <>
       <style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-          --bg: #080c12; --bg2: #0c111a; --denim: #2a4a7f; --denim-bright: #3d6499;
-          --denim-dim: #1a2e50; --slate: #4a5e7a; --slate-bright: #6b82a0;
-          --border: rgba(42,74,127,0.2); --text: #c8d0e0; --muted: #4e5e78;
-          --silver: #b0bcd0; --silver-bright: #d0dae8; --silver-dim: #2a3448;
-          --silver-line: rgba(176,188,208,0.15); --font: 'Overpass Mono', monospace;
+          --bg: #000000;
+          --bg2: #0a0a0a;
+          --denim: #2a4a7f;
+          --denim-bright: #3d6499;
+          --denim-dim: #1a2e50;
+          --slate: #4a5e7a;
+          --slate-bright: #6b82a0;
+          --border: rgba(42,74,127,0.2);
+          --text: #e8edf5;
+          --muted: #6b7a94;
+          --silver: #c8d4e8;
+          --silver-bright: #eef2f8;
+          --silver-dim: #2a3448;
+          --silver-line: rgba(176,188,208,0.15);
+          --font: 'Syne', sans-serif;
+          --mono: 'Space Mono', monospace;
         }
         html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.8; font-weight: 300; overflow-x: hidden; }
+        body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.7; font-weight: 400; overflow-x: hidden; }
         a { color: inherit; text-decoration: none; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: rgba(8,12,18,0.96); backdrop-filter: blur(18px); }
-        .logo { font-size: 0.85rem; letter-spacing: 0.12em; color: var(--silver-bright); font-weight: 500; text-shadow: 0 0 20px rgba(176,188,208,0.3); }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.96); backdrop-filter: blur(18px); }
+        .logo { font-size: 1rem; letter-spacing: 0.12em; color: var(--silver-bright); font-weight: 700; text-shadow: 0 0 20px rgba(176,188,208,0.3); }
         nav ul { list-style: none; display: flex; gap: 2.5rem; }
-        nav ul a { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; }
+        nav ul a { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; font-weight: 500; }
         nav ul a:hover { color: var(--silver); }
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); }
-        .eyebrow { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 1.5rem; }
-        .hero h1 { font-size: clamp(2.2rem, 5.5vw, 5rem); line-height: 1.08; font-weight: 500; margin-bottom: 2rem; color: var(--silver-bright); letter-spacing: 0.01em; }
+        .eyebrow { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
-        .subhead { font-size: 0.85rem; color: var(--muted); max-width: 60ch; margin-bottom: 1rem; line-height: 2; }
-        .btn { display: inline-block; margin-top: 1.5rem; padding: 0.7rem 1.8rem; border: 1px solid var(--denim); font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); background: rgba(42,74,127,0.12); transition: all 0.25s; }
+        .subhead { font-size: 1rem; color: var(--muted); max-width: 60ch; margin-bottom: 1rem; line-height: 1.9; font-weight: 400; }
+        .btn { display: inline-block; margin-top: 1.5rem; padding: 0.85rem 2rem; border: 1px solid var(--denim); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); font-family: var(--mono); background: rgba(42,74,127,0.12); transition: all 0.25s; }
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: var(--bg); background: var(--silver); }
@@ -37,19 +42,17 @@ export default function Home() {
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
         .pillar:last-child { border-right: none; }
-        .pillar-num { display: block; font-size: 0.6rem; letter-spacing: 0.22em; color: var(--denim-bright); margin-bottom: 1.5rem; }
-        .pillar h3 { font-size: 0.88rem; font-weight: 500; margin-bottom: 0.8rem; color: var(--silver); letter-spacing: 0.1em; text-transform: uppercase; }
-        .pillar p { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.9; }
-        .card-link { font-size: 0.62rem; letter-spacing: 0.16em; color: var(--denim-bright); text-transform: uppercase; transition: color 0.2s; }
+        .pillar-num { display: block; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.22em; color: var(--denim-bright); margin-bottom: 1.5rem; }
+        .pillar h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--silver); letter-spacing: 0.05em; text-transform: uppercase; }
+        .pillar p { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.9; }
+        .card-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.16em; color: var(--denim-bright); text-transform: uppercase; transition: color 0.2s; }
         .card-link:hover { color: var(--silver); }
         .contact { padding: 9rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
-        .contact h2 { font-size: clamp(1.3rem, 3vw, 2.4rem); font-weight: 400; margin-bottom: 3rem; color: var(--silver-bright); letter-spacing: 0.02em; }
+        .contact h2 { font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: 3rem; color: var(--silver-bright); letter-spacing: 0.02em; }
         .contact .eyebrow { margin-bottom: 1.2rem; }
-        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-size: 0.65rem; color: var(--silver-dim); letter-spacing: 0.12em; }
+        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.65rem; color: var(--silver-dim); letter-spacing: 0.12em; }
         .socials { display: flex; gap: 2rem; }
         .socials a:hover { color: var(--silver); }
-        .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.65s ease, transform 0.65s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
         @media (max-width: 700px) {
           nav { padding: 1.2rem 1.5rem; }
           nav ul { gap: 1.5rem; }
@@ -58,8 +61,7 @@ export default function Home() {
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
         }
       `}</style>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
       <nav>
         <a href="/" className="logo">MyoMentia</a>
         <ul>

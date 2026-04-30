@@ -1,3 +1,24 @@
+/* 1. Reset & Global Box Sizing */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* 2. Your Variables */
+:root {
+  --bg: #080c12;
+  --bg2: #0c111a;
+  /* ... the rest of your variables ... */
+}
+
+/* 3. Your Base Styles */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  /* ... the rest of your body styles ... */
+}
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -391,4 +412,4 @@ footer::before {
   .hero, .page-hero, .pillars, .prose-section, .cards-section, .contact, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
   .pillars { grid-template-columns: 1fr; }
   .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
-}
+} 

@@ -105,8 +105,9 @@ export default function Home() {
       <footer>
         <span>© 2026 MyoMentia</span>
         <div className="socials">
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
+          <a href="https://instagram.com/myomentia" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://youtube.com/@myomentia" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://linkedin.com/in/myomentia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </footer>
     </>

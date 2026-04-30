@@ -16,53 +16,14 @@ export default function Home() {
           --font: 'Syne', sans-serif;
           --mono: 'Space Mono', monospace;
         }
-        html { scroll-behavior: smooth; }
         body { background: #000000; color: #e8edf5; font-family: var(--font); font-size: 18px; line-height: 1.7; font-weight: 400; overflow-x: hidden; }
         a { color: inherit; text-decoration: none; }
-
-        /* ── Flowing background ── */
-        .flow-bg {
-          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-          z-index: 0; pointer-events: none;
-          background: #000000;
-          overflow: hidden;
-        }
-        .flow-bg::before, .flow-bg::after {
-          content: '';
-          position: absolute;
-          border-radius: 50%;
-          filter: blur(80px);
-          opacity: 0.12;
-          animation: drift 18s ease-in-out infinite alternate;
-        }
-        .flow-bg::before {
-          width: 700px; height: 700px;
-          background: radial-gradient(circle, #2a4a7f, transparent 70%);
-          top: -200px; left: -200px;
-        }
-        .flow-bg::after {
-          width: 600px; height: 600px;
-          background: radial-gradient(circle, #1a2e50, transparent 70%);
-          bottom: -150px; right: -150px;
-          animation-delay: -9s;
-          animation-duration: 22s;
-        }
-        @keyframes drift {
-          0% { transform: translate(0, 0) scale(1); }
-          50% { transform: translate(80px, 60px) scale(1.1); }
-          100% { transform: translate(40px, 120px) scale(0.95); }
-        }
-
-        /* ── Content above bg ── */
-        nav, section, footer { position: relative; z-index: 1; }
-
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.85); backdrop-filter: blur(18px); }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: #000000; backdrop-filter: blur(18px); }
         .logo { font-size: 1.1rem; letter-spacing: 0.12em; color: var(--silver-bright); font-weight: 700; }
         nav ul { list-style: none; display: flex; gap: 2.5rem; }
         nav ul a { font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; font-weight: 600; }
         nav ul a:hover { color: var(--silver); }
-
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); background: #000000; }
         .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
@@ -71,8 +32,7 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-
-        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); }
+        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
         .pillar:last-child { border-right: none; }
@@ -81,26 +41,21 @@ export default function Home() {
         .pillar p { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.9; }
         .card-link { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; color: var(--denim-bright); text-transform: uppercase; transition: color 0.2s; }
         .card-link:hover { color: var(--silver); }
-
-        .contact { padding: 9rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+        .contact { padding: 9rem 4rem; text-align: center; border-bottom: 1px solid var(--border); background: #000000; }
         .contact h2 { font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: 3rem; color: var(--silver-bright); }
         .contact .eyebrow { margin-bottom: 1.2rem; }
-
-        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.12em; }
+        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.12em; background: #000000; }
         .socials { display: flex; gap: 2rem; }
         .socials a:hover { color: var(--silver); }
-
         @media (max-width: 700px) {
           nav { padding: 1.2rem 1.5rem; }
           nav ul { gap: 1.5rem; }
           .hero, .pillars, .contact, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
-          .subhead { max-width: 100%; }
         }
       `}</style>
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
-      <div className="flow-bg" />
       <nav>
         <a href="/" className="logo">MyoMentia</a>
         <ul>

@@ -94,7 +94,7 @@ export default function Home() {
       <section className="contact">
         <p className="eyebrow">Get in touch</p>
         <h2>Want to work together?</h2>
-        <a href="mailto:you@email.com" className="btn btn-outline">Send a message</a>
+        <a href="mailto:myomentia@gmail.com" className="btn btn-outline">Send a message</a>
       </section>
       <footer>
         <span>© 2026 MyoMentia</span>

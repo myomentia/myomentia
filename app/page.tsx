@@ -1,4 +1,7 @@
+"use client";
+import { useState } from "react";
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <style>{`
@@ -23,6 +26,13 @@ export default function Home() {
         nav ul { list-style: none; display: flex; gap: 2.5rem; }
         nav ul a { font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; font-weight: 600; }
         nav ul a:hover { color: var(--silver); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--silver-bright); transition: all 0.3s; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #000000; z-index: 99; flex-direction: column; justify-content: center; align-items: center; gap: 3rem; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { font-size: 1.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; transition: color 0.25s; }
+        .mobile-menu a:hover { color: var(--silver); }
+        .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--silver); font-size: 2rem; cursor: pointer; }
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); background: #000000; }
         .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
@@ -49,13 +59,26 @@ export default function Home() {
         .socials a:hover { color: var(--silver); }
         @media (max-width: 700px) {
           nav { padding: 1.2rem 1.5rem; }
-          nav ul { gap: 1.5rem; }
-          .hero, .pillars, .contact, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+          nav ul { display: none; }
+          .hamburger { display: flex; }
+          .hero { padding: 0 1.5rem 4rem; min-height: 100svh; }
+          .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 1.5rem; }
+          .eyebrow { font-size: 0.7rem; margin-bottom: 1.2rem; }
+          .subhead { font-size: 1rem; max-width: 100%; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
+          .contact { padding: 5rem 1.5rem; }
+          footer { flex-direction: column; gap: 1.2rem; text-align: center; padding: 2rem 1.5rem; }
+          .socials { justify-content: center; }
         }
       `}</style>
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <button className="mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
+        <a href="/story" onClick={() => setMenuOpen(false)}>Story</a>
+        <a href="/science" onClick={() => setMenuOpen(false)}>Science</a>
+        <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
+      </div>
       <nav>
         <a href="/" className="logo">MyoMentia</a>
         <ul>
@@ -63,6 +86,9 @@ export default function Home() {
           <li><a href="/science">Science</a></li>
           <li><a href="/services">Services</a></li>
         </ul>
+        <button className="hamburger" onClick={() => setMenuOpen(true)}>
+          <span /><span /><span />
+        </button>
       </nav>
       <section className="hero">
         <p className="eyebrow">Movement · Pelvic Health · Neuroscience</p>

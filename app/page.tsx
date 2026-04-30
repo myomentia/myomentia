@@ -5,7 +5,7 @@ export default function Home() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
           --bg: #000000;
-          --bg2: #0a0a0a;
+          --bg2: #050505;
           --denim: #2a4a7f;
           --denim-bright: #3d6499;
           --denim-dim: #1a2e50;
@@ -22,35 +22,35 @@ export default function Home() {
           --mono: 'Space Mono', monospace;
         }
         html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 18px; line-height: 1.7; font-weight: 400; overflow-x: hidden; }
+        body { background: #000000; color: var(--text); font-family: var(--font); font-size: 18px; line-height: 1.7; font-weight: 400; overflow-x: hidden; }
         a { color: inherit; text-decoration: none; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.96); backdrop-filter: blur(18px); }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; border-bottom: 1px solid var(--border); background: #000000; backdrop-filter: blur(18px); }
         .logo { font-size: 1.1rem; letter-spacing: 0.12em; color: var(--silver-bright); font-weight: 700; }
         nav ul { list-style: none; display: flex; gap: 2.5rem; }
         nav ul a { font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color 0.25s; font-weight: 600; }
         nav ul a:hover { color: var(--silver); }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); }
-        .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 1.5rem; }
-        .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2rem; color: var(--silver-bright); letter-spacing: -0.01em; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); background: #000000; }
+        .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
+        .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 3.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
-        .subhead { font-size: 1.15rem; color: var(--muted); max-width: 60ch; margin-bottom: 1rem; line-height: 1.9; font-weight: 400; }
-        .btn { display: inline-block; margin-top: 1.5rem; padding: 0.85rem 2rem; border: 1px solid var(--denim); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); font-family: var(--mono); background: rgba(42,74,127,0.12); transition: all 0.25s; }
+        .subhead { font-size: 1.15rem; color: var(--muted); max-width: 58ch; margin-bottom: 1.8rem; line-height: 2.1; font-weight: 400; }
+        .btn { display: inline-block; margin-top: 2rem; padding: 0.85rem 2rem; border: 1px solid var(--denim); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); font-family: var(--mono); background: rgba(42,74,127,0.12); transition: all 0.25s; }
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: var(--bg); background: var(--silver); }
-        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); }
+        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
         .pillar:last-child { border-right: none; }
         .pillar-num { display: block; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.22em; color: var(--denim-bright); margin-bottom: 1.5rem; }
-        .pillar h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--silver); letter-spacing: 0.05em; text-transform: uppercase; }
-        .pillar p { font-size: 1rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.9; }
+        .pillar h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--silver); letter-spacing: 0.05em; text-transform: uppercase; }
+        .pillar p { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; line-height: 2; }
         .card-link { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.16em; color: var(--denim-bright); text-transform: uppercase; transition: color 0.2s; }
         .card-link:hover { color: var(--silver); }
-        .contact { padding: 9rem 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+        .contact { padding: 9rem 4rem; text-align: center; border-bottom: 1px solid var(--border); background: #000000; }
         .contact h2 { font-size: clamp(1.8rem, 4vw, 3.2rem); font-weight: 700; margin-bottom: 3rem; color: var(--silver-bright); letter-spacing: 0.02em; }
         .contact .eyebrow { margin-bottom: 1.2rem; }
-        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.12em; }
+        footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.12em; background: #000000; }
         .socials { display: flex; gap: 2rem; }
         .socials a:hover { color: var(--silver); }
         @media (max-width: 700px) {
@@ -73,7 +73,8 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">Movement · Pelvic Health · Neuroscience</p>
         <h1>Myo<em>Mentia.</em></h1>
-        <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research. Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
+        <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research.</p>
+        <p className="subhead">Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
         <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
         <a href="/story" className="btn">Read the Story</a>
       </section>

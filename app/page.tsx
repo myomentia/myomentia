@@ -1,7 +1,15 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const images = ["/images/banner1.jpg", "/images/banner2.jpg", "/images/banner3.jpg"];
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(prev => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <>
       <style>{`
@@ -42,6 +50,13 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
+        .banner { width: 100%; height: 70vh; position: relative; overflow: hidden; background: #000; }
+        .banner-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease; }
+        .banner-img.active { opacity: 1; }
+        .banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.5) 100%); z-index: 1; }
+        .banner-dots { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.5rem; z-index: 2; }
+        .banner-dots span { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); transition: background 0.3s; cursor: pointer; }
+        .banner-dots span.active { background: rgba(255,255,255,0.9); }
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
@@ -65,6 +80,7 @@ export default function Home() {
           .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 1.5rem; }
           .eyebrow { font-size: 0.7rem; margin-bottom: 1.2rem; }
           .subhead { font-size: 1rem; max-width: 100%; }
+          .banner { height: 40vh; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
           .contact { padding: 5rem 1.5rem; }
@@ -97,6 +113,16 @@ export default function Home() {
         <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
         <a href="/story" className="btn">Read the Story</a>
       </section>
+      <div className="banner">
+        {images.map((src, i) => (
+          <img key={i} src={src} alt={`Banner ${i + 1}`} className={`banner-img ${i === current ? "active" : ""}`} />
+        ))}
+        <div className="banner-dots">
+          {images.map((_, i) => (
+            <span key={i} className={i === current ? "active" : ""} onClick={() => setCurrent(i)} />
+          ))}
+        </div>
+      </div>
       <section id="pillars" className="pillars">
         <div className="pillar">
           <span className="pillar-num">01</span>

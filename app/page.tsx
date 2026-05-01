@@ -32,7 +32,7 @@ export default function Home() {
         .mobile-menu a { font-size: 1.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; transition: color 0.25s; }
         .mobile-menu a:hover { color: var(--silver); }
         .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--silver); font-size: 2rem; cursor: pointer; }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; background: #000000; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); background: #000000; }
         .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
@@ -41,9 +41,6 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-        .banner-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #111; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .banner-strip img { width: 100%; height: auto; display: block; opacity: 0.88; transition: opacity 0.4s ease; }
-        .banner-strip img:hover { opacity: 1; }
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
@@ -67,7 +64,6 @@ export default function Home() {
           .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 1.5rem; }
           .eyebrow { font-size: 0.7rem; margin-bottom: 1.2rem; }
           .subhead { font-size: 1rem; max-width: 100%; }
-          .banner-strip { grid-template-columns: 1fr; gap: 2px; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
           .contact { padding: 5rem 1.5rem; }
@@ -100,11 +96,6 @@ export default function Home() {
         <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
         <a href="/story" className="btn">Read the Story</a>
       </section>
-      <div className="banner-strip">
-        <img src="/images/banner1.jpg" alt="Banner 1" />
-        <img src="/images/banner2.jpg" alt="Banner 2" />
-        <img src="/images/banner3.jpg" alt="Banner 3" />
-      </div>
       <section id="pillars" className="pillars">
         <div className="pillar">
           <span className="pillar-num">01</span>

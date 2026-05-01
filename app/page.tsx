@@ -43,8 +43,8 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-        .hero-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; align-self: center; padding-top: 8rem; }
-        .hero-images img { width: 100%; aspect-ratio: 2/3; object-fit: cover; display: block; filter: brightness(0.85); transition: filter 0.3s; }
+        .hero-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-self: flex-start; padding-top: 9rem; max-width: 320px; margin-left: auto; }
+        .hero-images img { width: 100%; aspect-ratio: 1/1; object-fit: contain; background: #000; display: block; filter: brightness(0.85); transition: filter 0.3s; }
         .hero-images img:hover { filter: brightness(1); }
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }

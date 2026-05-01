@@ -96,7 +96,7 @@ export default function Home() {
         </button>
       </nav>
       <section className="hero">
-        <p className="eyebrow">Movement · Pelvic Health · Neuroscience</p>
+        <p className="eyebrow">Pelvic Health · Movement · Neuroscience</p>
         <h1>Myo<em>Mentia.</em></h1>
         <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research. Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
         <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>

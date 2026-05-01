@@ -32,7 +32,7 @@ export default function Home() {
         .mobile-menu a { font-size: 1.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; transition: color 0.25s; }
         .mobile-menu a:hover { color: var(--silver); }
         .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--silver); font-size: 2rem; cursor: pointer; }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: none; background: #000000; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; background: #000000; }
         .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
         .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
@@ -41,11 +41,9 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-        /* ── Banner strip ── */
         .banner-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #111; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
         .banner-strip img { width: 100%; height: auto; display: block; opacity: 0.88; transition: opacity 0.4s ease; }
         .banner-strip img:hover { opacity: 1; }
-        /* ── Pillars ── */
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
@@ -110,15 +108,15 @@ export default function Home() {
       <section id="pillars" className="pillars">
         <div className="pillar">
           <span className="pillar-num">01</span>
-          <h3>Movement</h3>
-          <p>The intervention. How the body moves shapes how it heals — and why.</p>
-          <a href="/science" className="card-link">Explore the Science →</a>
-        </div>
-        <div className="pillar">
-          <span className="pillar-num">02</span>
           <h3>Pelvic Health</h3>
           <p>The outcome. Men&apos;s pelvic function, understood through a new lens.</p>
           <a href="/services" className="card-link">View Services →</a>
+        </div>
+        <div className="pillar">
+          <span className="pillar-num">02</span>
+          <h3>Movement</h3>
+          <p>The intervention. How the body moves shapes how it heals — and why.</p>
+          <a href="/science" className="card-link">Explore the Science →</a>
         </div>
         <div className="pillar">
           <span className="pillar-num">03</span>

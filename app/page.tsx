@@ -9,13 +9,12 @@ export default function Home() {
         :root {
           --denim: #2a4a7f;
           --denim-bright: #3d6499;
-          --denim-dim: #1a2e50;
-          --slate-bright: #6b82a0;
           --border: rgba(42,74,127,0.25);
           --muted: #8a96aa;
           --silver: #c8d4e8;
           --silver-bright: #eef2f8;
           --silver-dim: #2a3448;
+          --slate-bright: #6b82a0;
           --font: 'Syne', sans-serif;
           --mono: 'Space Mono', monospace;
         }
@@ -33,19 +32,20 @@ export default function Home() {
         .mobile-menu a { font-size: 1.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 700; transition: color 0.25s; }
         .mobile-menu a:hover { color: var(--silver); }
         .mobile-close { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--silver); font-size: 2rem; cursor: pointer; }
-        .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; padding: 0 4rem 6rem; border-bottom: 1px solid var(--border); background: #000000; }
-        .hero-text { display: flex; flex-direction: column; justify-content: flex-end; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 4rem 6rem; border-bottom: none; background: #000000; }
         .eyebrow { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--denim-bright); margin-bottom: 2rem; }
-        .hero h1 { font-size: clamp(3rem, 6vw, 7rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
+        .hero h1 { font-size: clamp(3.5rem, 8vw, 8rem); line-height: 1.02; font-weight: 700; margin-bottom: 2.5rem; color: var(--silver-bright); letter-spacing: -0.01em; }
         .hero h1 em { font-style: normal; color: var(--denim-bright); }
         .subhead { font-size: 1.1rem; color: var(--muted); max-width: 80ch; margin-bottom: 0.9rem; line-height: 1.85; font-weight: 400; }
         .btn { display: inline-block; margin-top: 2rem; padding: 0.85rem 2rem; border: 1px solid var(--denim); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver); font-family: var(--mono); background: rgba(42,74,127,0.12); transition: all 0.25s; }
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-        .hero-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; align-self: center; padding-top: 8rem; }
-        .hero-images img { width: 100%; height: 220px; object-fit: cover; object-position: center; display: block; filter: brightness(0.85); transition: filter 0.3s; }
-        .hero-images img:hover { filter: brightness(1); }
+        /* ── Banner strip ── */
+        .banner-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #111; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .banner-strip img { width: 100%; height: auto; display: block; opacity: 0.88; transition: opacity 0.4s ease; }
+        .banner-strip img:hover { opacity: 1; }
+        /* ── Pillars ── */
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
         .pillar:hover { background: rgba(42,74,127,0.08); }
@@ -61,10 +61,6 @@ export default function Home() {
         footer { display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 4rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.12em; background: #000000; }
         .socials { display: flex; gap: 2rem; }
         .socials a:hover { color: var(--silver); }
-        @media (max-width: 900px) {
-          .hero { grid-template-columns: 1fr; }
-          .hero-images { padding-top: 0; }
-        }
         @media (max-width: 700px) {
           nav { padding: 1.2rem 1.5rem; }
           nav ul { display: none; }
@@ -73,7 +69,7 @@ export default function Home() {
           .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 1.5rem; }
           .eyebrow { font-size: 0.7rem; margin-bottom: 1.2rem; }
           .subhead { font-size: 1rem; max-width: 100%; }
-          .hero-images img { height: 140px; }
+          .banner-strip { grid-template-columns: 1fr; gap: 2px; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
           .contact { padding: 5rem 1.5rem; }
@@ -100,19 +96,17 @@ export default function Home() {
         </button>
       </nav>
       <section className="hero">
-        <div className="hero-text">
-          <p className="eyebrow">Movement · Pelvic Health · Neuroscience</p>
-          <h1>Myo<em>Mentia.</em></h1>
-          <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research. Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
-          <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
-          <a href="/story" className="btn">Read the Story</a>
-        </div>
-        <div className="hero-images">
-          <img src="/images/banner1.jpg" alt="Banner 1" />
-          <img src="/images/banner2.jpg" alt="Banner 2" />
-          <img src="/images/banner3.jpg" alt="Banner 3" />
-        </div>
+        <p className="eyebrow">Movement · Pelvic Health · Neuroscience</p>
+        <h1>Myo<em>Mentia.</em></h1>
+        <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research. Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
+        <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
+        <a href="/story" className="btn">Read the Story</a>
       </section>
+      <div className="banner-strip">
+        <img src="/images/banner1.jpg" alt="Banner 1" />
+        <img src="/images/banner2.jpg" alt="Banner 2" />
+        <img src="/images/banner3.jpg" alt="Banner 3" />
+      </div>
       <section id="pillars" className="pillars">
         <div className="pillar">
           <span className="pillar-num">01</span>

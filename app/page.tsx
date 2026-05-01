@@ -101,9 +101,9 @@ export default function Home() {
         <a href="/story" className="btn">Read the Story</a>
       </section>
       <div className="banner-strip">
-        <img src="/images/bann1.jpg" alt="Banner 1" />
-        <img src="/images/bann2.jpg" alt="Banner 2" />
-        <img src="/images/bann3.jpg" alt="Banner 3" />
+        <img src="/images/banner1.jpg" alt="Banner 1" />
+        <img src="/images/banner2.jpg" alt="Banner 2" />
+        <img src="/images/banner3.jpg" alt="Banner 3" />
       </div>
       <section id="pillars" className="pillars">
         <div className="pillar">

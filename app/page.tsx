@@ -43,8 +43,8 @@ export default function Home() {
         .btn:hover { background: var(--denim); color: var(--silver-bright); border-color: var(--denim-bright); }
         .btn-outline { border-color: var(--silver-dim); color: var(--slate-bright); background: transparent; }
         .btn-outline:hover { border-color: var(--silver); color: #000; background: var(--silver); }
-        .hero-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; align-self: flex-start; padding-top: 9rem; max-width: 320px; margin-left: auto; }
-        .hero-images img { width: 100%; aspect-ratio: 1/1; object-fit: contain; background: #000; display: block; filter: brightness(0.85); transition: filter 0.3s; }
+        .hero-images { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; align-self: center; padding-top: 8rem; }
+        .hero-images img { width: 100%; height: 220px; object-fit: cover; object-position: center; display: block; filter: brightness(0.85); transition: filter 0.3s; }
         .hero-images img:hover { filter: brightness(1); }
         .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); background: #000000; }
         .pillar { padding: 3.5rem 4rem; border-right: 1px solid var(--border); transition: background 0.3s; }
@@ -63,7 +63,7 @@ export default function Home() {
         .socials a:hover { color: var(--silver); }
         @media (max-width: 900px) {
           .hero { grid-template-columns: 1fr; }
-          .hero-images { grid-template-columns: repeat(3, 1fr); padding-top: 0; }
+          .hero-images { padding-top: 0; }
         }
         @media (max-width: 700px) {
           nav { padding: 1.2rem 1.5rem; }
@@ -73,7 +73,7 @@ export default function Home() {
           .hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 1.5rem; }
           .eyebrow { font-size: 0.7rem; margin-bottom: 1.2rem; }
           .subhead { font-size: 1rem; max-width: 100%; }
-          .hero-images { gap: 4px; }
+          .hero-images img { height: 140px; }
           .pillars { grid-template-columns: 1fr; }
           .pillar { border-right: none; border-bottom: 1px solid var(--border); padding: 2.5rem 1.5rem; }
           .contact { padding: 5rem 1.5rem; }
@@ -108,9 +108,9 @@ export default function Home() {
           <a href="/story" className="btn">Read the Story</a>
         </div>
         <div className="hero-images">
-          <img src="/images/banner1.jpg" alt="Image 1" />
-          <img src="/images/banner2.jpg" alt="Image 2" />
-          <img src="/images/banner3.jpg" alt="Image 3" />
+          <img src="/images/banner1.jpg" alt="Banner 1" />
+          <img src="/images/banner2.jpg" alt="Banner 2" />
+          <img src="/images/banner3.jpg" alt="Banner 3" />
         </div>
       </section>
       <section id="pillars" className="pillars">

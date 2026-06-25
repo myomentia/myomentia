@@ -27,7 +27,7 @@ export default function Science() {
         .page-hero h1 { font-size: clamp(2.5rem, 5.5vw, 5rem); line-height: 1.05; font-weight: 700; color: #ffffff; }
         .prose-section { padding: 7rem 4rem; border-bottom: 1px solid var(--border); }
         .prose-inner { max-width: 68ch; margin: 0 auto; }
-        .prose-inner p { font-size: 1rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 2; }
+        .prose-inner p { font-size: 1rem; color: var(--silver-bright); margin-bottom: 1.8rem; line-height: 2; }
         .prose-inner h2 { font-size: 0.85rem; font-weight: 600; color: var(--silver-bright); margin: 3rem 0 1.2rem; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 0.8rem; border-bottom: 1px solid var(--silver-line); }
         footer { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.12em; border-top: 1px solid var(--border); }
         .socials { display: flex; gap: 2rem; }
@@ -53,9 +53,12 @@ export default function Science() {
       </section>
       <section className="prose-section">
         <div className="prose-inner">
-          <p>This is where you break down the science behind MyoMentia — movement science, pelvic floor research, placebo mechanisms, whatever you want to teach.</p>
-          <p>You can write articles, summaries, or breakdowns of studies here. Keep it accessible — your audience wants to learn, not wade through jargon.</p>
-          <p>Fill this in as your thinking develops. It doesn&apos;t have to be complete on day one.</p>
+          <p>There&apos;s a study where hotel housekeepers were told that their daily work counted as exercise meeting recommended physical activity guidelines. A control group was told nothing. Same jobs, same bodies, same hours. A month later, the group that was informed showed measurable decreases in weight, blood pressure, and body fat. The control group showed none of that.</p>
+          <p>Nothing changed except what they believed.</p>
+          <p>That study gets cited a lot in placebo research because it illustrates something that&apos;s easy to dismiss and hard to explain away: the brain is not a passive observer of what happens in the body. It is an active participant. What you expect, what you&apos;ve been told, and what you believe about your own health have measurable downstream effects on physiology.</p>
+          <p>This isn&apos;t mystical. The mechanisms are real. The nervous system regulates inflammation, modulates pain signals before they reach conscious awareness, and influences hormonal output based on perceived threat and safety. These aren&apos;t fringe ideas. They show up consistently in the literature and they complicate the simple story that health is just a matter of fixing broken tissue.</p>
+          <p>What I find interesting is how rarely this gets communicated to patients. Most people walk into a clinical encounter without any framework for understanding why context, expectation, and even the therapeutic relationship might influence outcomes. The research suggests those things matter quite a bit.</p>
+          <p>I&apos;m still early in my training and far from any conclusions. This page is less a resource and more a running record of what I&apos;m reading, thinking about, and trying to understand. If any of it is useful to you, that&apos;s the point.</p>
         </div>
       </section>
       <footer>

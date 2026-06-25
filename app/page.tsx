@@ -99,7 +99,7 @@ return (
 <section className="hero">
 <p className="eyebrow">Pelvic Health · Movement · Neuroscience</p>
 <h1>Myo<em>Mentia.</em></h1>
-<p className="subhead">Pelvic health issues affect millions of men, yet almost no one talks about it. Pain, leakage, post-surgery recovery, and sexual dysfunction are real, treatable problems that too many men silently struggle with. MyoMentia is an educational content platform built by a physical therapy student, combining movement, physical therapy principles, and neuroscience to help men better understand their bodies. This is not a clinical service, and nothing here is medical advice.</p>
+<p className="subhead">Pelvic health issues affect millions of men, yet almost no one talks about it. Pain, leakage, post-surgery recovery, and sexual dysfunction are real, treatable problems that too many men silently struggle with. MyoMentia is an educational content platform built by a physical therapy student, combining movement, physical therapy principles, and neuroscience to help men better understand their bodies. This is not a clinical service and nothing here is medical advice. Please reach out if I can clarify my sources of information.</p>
 <a href="/story" className="btn">Read the Story</a>
 </section>
 <div className="banner-strip">

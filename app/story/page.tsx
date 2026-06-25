@@ -27,7 +27,7 @@ export default function Story() {
         .page-hero h1 { font-size: clamp(2.5rem, 5.5vw, 5rem); line-height: 1.05; font-weight: 700; color: #ffffff; }
         .prose-section { padding: 7rem 4rem; border-bottom: 1px solid var(--border); }
         .prose-inner { max-width: 68ch; margin: 0 auto; }
-        .prose-inner p { font-size: 1rem; color: var(--muted); margin-bottom: 1.8rem; line-height: 2; }
+        .prose-inner p { font-size: 1rem; color: var(--silver-bright); margin-bottom: 1.8rem; line-height: 2; }
         .prose-inner h2 { font-size: 0.85rem; font-weight: 600; color: var(--silver-bright); margin: 3rem 0 1.2rem; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 0.8rem; border-bottom: 1px solid var(--silver-line); }
         footer { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.12em; border-top: 1px solid var(--border); }
         .socials { display: flex; gap: 2rem; }
@@ -53,9 +53,12 @@ export default function Story() {
       </section>
       <section className="prose-section">
         <div className="prose-inner">
-          <p>This is where your story goes. Talk about who you are, what led you to physical therapy, what you&apos;re researching in the placebo lab, and why men&apos;s pelvic health matters to you.</p>
-          <p>Be personal. Be direct. People come here because they want to understand — give them something real.</p>
-          <p>Add as many paragraphs as you need. You can also add subheadings below using an h2 tag.</p>
+          <p>I started as a biochemistry major trying to understand the body at a molecular level. What I kept running into was how much of health couldn&apos;t be explained by molecules alone.</p>
+          <p>Pole vaulting got me there first. The sport is almost entirely mental. The difference between a good jump and a bad one usually has nothing to do with your legs. That connection between what the brain expects and what the body does became something I couldn&apos;t stop thinking about.</p>
+          <p>That&apos;s what pushed me toward physical therapy. It&apos;s one of the few fields where you&apos;re actually trained to think about movement, cognition, and pain together. The nuance felt right. I wanted to work in a space where the answer to &quot;why does this person hurt&quot; wasn&apos;t always a prescription.</p>
+          <p>That led me to pain research, specifically the role of placebo and non-pharmacological interventions in recovery. What I found was that belief, context, and expectation aren&apos;t soft variables. They&apos;re measurable, they matter, and they&apos;re mostly absent from how we talk to patients.</p>
+          <p>Men&apos;s pelvic health is where a lot of this converges. These are common, treatable problems, but most men never seek help for them and many don&apos;t even know help exists. That&apos;s not a coincidence. Men are socialized to ignore their bodies, push through pain, and not ask questions, and that pattern ends up hurting everyone. The same structure that tells men not to cry also tells them not to go to the doctor.</p>
+          <p>I&apos;m a physical therapy student and researcher trying to do something about a small piece of that. This platform is educational content, not clinical care, and I&apos;m not a licensed provider yet. But I think giving men accurate, honest information about their own bodies is a reasonable place to start.</p>
         </div>
       </section>
       <footer>

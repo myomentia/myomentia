@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <>
-      <style>{`
+const [menuOpen, setMenuOpen] = useState(false);
+return (
+<>
+<style>{`
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
           --denim: #2a4a7f;
@@ -78,69 +78,68 @@ export default function Home() {
           .socials { justify-content: center; }
         }
       `}</style>
-      <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <button className="mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
-        <a href="/story" onClick={() => setMenuOpen(false)}>Story</a>
-        <a href="/science" onClick={() => setMenuOpen(false)}>Science</a>
-        <a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
-      </div>
-      <nav>
-        <a href="/" className="logo">MyoMentia</a>
-        <ul>
-          <li><a href="/story">Story</a></li>
-          <li><a href="/science">Science</a></li>
-          <li><a href="/services">Services</a></li>
-        </ul>
-        <button className="hamburger" onClick={() => setMenuOpen(true)}>
-          <span /><span /><span />
-        </button>
-      </nav>
-      <section className="hero">
-        <p className="eyebrow">Pelvic Health · Movement · Neuroscience</p>
-        <h1>Myo<em>Mentia.</em></h1>
-        <p className="subhead">MyoMentia sits at the intersection of movement science, men&apos;s pelvic health, and perception research. Movement is the intervention. Pelvic function is the outcome. Philosophy is the why underneath the why.</p>
-        <p className="subhead">And placebo — the power of perception itself — is the thread connecting all three.</p>
-        <a href="/story" className="btn">Read the Story</a>
-      </section>
-      <div className="banner-strip">
-        <img src="/images/banner1.jpg" alt="Banner 1" />
-        <img src="/images/banner2.jpg" alt="Banner 2" />
-        <img src="/images/banner3.jpg" alt="Banner 3" />
-      </div>
-      <section id="pillars" className="pillars">
-        <div className="pillar">
-          <span className="pillar-num">01</span>
-          <h3>Pelvic Health</h3>
-          <p>The outcome. Men&apos;s pelvic function, understood through a new lens.</p>
-          <a href="/services" className="card-link">View Services →</a>
-        </div>
-        <div className="pillar">
-          <span className="pillar-num">02</span>
-          <h3>Movement</h3>
-          <p>The intervention. How the body moves shapes how it heals — and why.</p>
-          <a href="/science" className="card-link">Explore the Science →</a>
-        </div>
-        <div className="pillar">
-          <span className="pillar-num">03</span>
-          <h3>Neuroscience</h3>
-          <p>The thread. Placebo, belief, and the power of the mind-body connection.</p>
-          <a href="/story" className="card-link">The Philosophy →</a>
-        </div>
-      </section>
-      <section className="contact">
-        <p className="eyebrow">Get in touch</p>
-        <h2>Want to work together?</h2>
-        <a href="mailto:myomentia@gmail.com" className="btn btn-outline">Send a message</a>
-      </section>
-      <footer>
-        <span>© 2026 MyoMentia</span>
-        <div className="socials">
-          <a href="https://instagram.com/myomentia" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://youtube.com/@myomentia" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="https://linkedin.com/in/myomentia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </footer>
-    </>
+<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+<button className="mobile-close" onClick={() => setMenuOpen(false)}>✕</button>
+<a href="/story" onClick={() => setMenuOpen(false)}>Story</a>
+<a href="/science" onClick={() => setMenuOpen(false)}>Science</a>
+<a href="/services" onClick={() => setMenuOpen(false)}>Services</a>
+</div>
+<nav>
+<a href="/" className="logo">MyoMentia</a>
+<ul>
+<li><a href="/story">Story</a></li>
+<li><a href="/science">Science</a></li>
+<li><a href="/services">Services</a></li>
+</ul>
+<button className="hamburger" onClick={() => setMenuOpen(true)}>
+<span /><span /><span />
+</button>
+</nav>
+<section className="hero">
+<p className="eyebrow">Pelvic Health · Movement · Neuroscience</p>
+<h1>Myo<em>Mentia.</em></h1>
+<p className="subhead">Pelvic health issues affect millions of men, yet almost no one talks about it. Pain, leakage, post-surgery recovery, and sexual dysfunction are real, treatable problems that too many men silently struggle with. MyoMentia is an educational content platform built by a physical therapy student, combining movement, physical therapy principles, and neuroscience to help men better understand their bodies. This is not a clinical service, and nothing here is medical advice.</p>
+<a href="/story" className="btn">Read the Story</a>
+</section>
+<div className="banner-strip">
+<img src="/images/banner1.jpg" alt="Banner 1" />
+<img src="/images/banner2.jpg" alt="Banner 2" />
+<img src="/images/banner3.jpg" alt="Banner 3" />
+</div>
+<section id="pillars" className="pillars">
+<div className="pillar">
+<span className="pillar-num">01</span>
+<h3>Pelvic Health</h3>
+<p>The topic. An area of men&apos;s health that&apos;s widely misunderstood, rarely discussed, and more common than most people realize.</p>
+<a href="/services" className="card-link">View Services →</a>
+</div>
+<div className="pillar">
+<span className="pillar-num">02</span>
+<h3>Movement</h3>
+<p>The lens. Movement isn&apos;t just exercise. Physical therapy has spent decades studying how the body adapts, compensates, and heals. That&apos;s what this draws from.</p>
+<a href="/science" className="card-link">Explore the Science →</a>
+</div>
+<div className="pillar">
+<span className="pillar-num">03</span>
+<h3>Neuroscience</h3>
+<p>The thread. Pain and recovery aren&apos;t purely mechanical. The brain is involved in both, and that changes how you approach treatment.</p>
+<a href="/story" className="card-link">The Philosophy →</a>
+</div>
+</section>
+<section className="contact">
+<p className="eyebrow">Get in touch</p>
+<h2>Want to work together?</h2>
+<a href="mailto:myomentia@gmail.com" className="btn btn-outline">Send a message</a>
+</section>
+<footer>
+<span>© 2026 MyoMentia</span>
+<div className="socials">
+<a href="https://instagram.com/myomentia" target="_blank" rel="noopener noreferrer">Instagram</a>
+<a href="https://youtube.com/@myomentia" target="_blank" rel="noopener noreferrer">YouTube</a>
+<a href="https://linkedin.com/in/myomentia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</footer>
+</>
   );
 }
